@@ -6,7 +6,7 @@ services:
     entrypoint: ./.docker/entrypoint.sh
     container_name: backend-nestjs
     ports:
-      - 3001:3001
+      - 3000:3000
     volumes:
       - .:/home/node/app
     depends_on: [db]
@@ -18,6 +18,8 @@ services:
     tty: true
     ports:
       - 33006:3306
+    expose:
+      - 3306
     volumes:
       - ./.docker/dbdata:/var/lib/mysql
     environment:
