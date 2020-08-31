@@ -1,13 +1,11 @@
 FROM node:12.14.0-alpine3.11
 
-RUN apk add --no-cache bash git
+WORKDIR /usr/src/app
 
-RUN touch /home/node/.bashrc | echo "PS1='\w\$ '" >> /home/node/.bashrc
+COPY package*.json ./
 
-RUN npm config set cache /home/node/app/.npm-cache --global
+RUN npm install
 
-RUN npm i -g @nestjs/cli@7.4.1
+COPY . .
 
-USER node
-
-WORKDIR /home/node/app
+ENTRYPOINT [ "sh", "/usr/src/app/.docker/entrypoint.sh"]

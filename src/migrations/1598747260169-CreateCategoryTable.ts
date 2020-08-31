@@ -8,7 +8,7 @@ export class CreateCategoryTable1598747260169 implements MigrationInterface {
             columns: [
                 {
                     name: 'id',
-                    type: 'int',
+                    type: 'integer',
                     isPrimary: true,
                     isGenerated: true,
                     generationStrategy: 'increment'

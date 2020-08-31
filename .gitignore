@@ -104,8 +104,7 @@ dist
 .tern-port
 
 # Local
-.env
 dist
 .npm-cache
-.docker/dbdata
+mydb.sql
 package-lock.json
