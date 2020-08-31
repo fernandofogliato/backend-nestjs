@@ -6,7 +6,14 @@ Content-Type: application/json
 }
 
 ###
+PUT http://localhost:3000/categories/1
+Content-Type: application/json
 
+{
+    "name": "Category Update 1"
+}
+
+###
 GET http://localhost:3000/categories
 
 ###
@@ -14,11 +21,3 @@ GET http://localhost:3000/categories/1
 
 ###
 DELETE http://localhost:3000/categories/1
-
-###
-PUT http://localhost:3000/categories/1
-Content-Type: application/json
-
-{
-    "name": "Category Update 1"
-}
